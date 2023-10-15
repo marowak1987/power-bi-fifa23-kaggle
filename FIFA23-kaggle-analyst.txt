@@ -1,0 +1,70 @@
+power bi > get data text/csv > male_players
+transform data
+-player id filter unclick 'null'
+-close & apply
+
+visualizations >> table + data >> male_players > short_name + overall + league_name
+visualizations >> columns > sum of overall > don't summarize
+Filters >> filters on this visual > league_name > premier league + la liga + ligue 1 + serie a
+(sort by overall)
+data >> fifa_update_date > year
+visualizations >> stacked bar chart
+
+overall move to x-axis
+fifa_update_date move to legend
+league_name delete
+fifa_update_date move to y-axis
+visualizations >> clustered bar chart
+fifa_update_date delete from y-axis
+x-axis > sum of overall > average
+
+new visualizations >> slicer + data >> league_name
+visualizations >> format your visual
+slicer setting > style > dropdown
+
+new visualizations >> slicer + data >> club_name
+visualizations >> format your visual
+slicer setting > style > dropdown
+
+new visualizations >> slicer + data >> year
+visualizations >> format your visual
+slicer setting > style > dropdown
+
+choose average of overall by short_name table
+visualizations >> format your visual > data label: on
+
+new visualizations >> card + data >> value_eur
+new visualizations >> card + data >> wage_eur
+new visualizations >> card + data >> age > fileld > sum of age > average
+
+new visualizations >> multi row card + data >> club_position + overall
+fields > sum of overall > average
+visualizations >> format your visual > category labels: off
+
+club_position > more options > new group
+cb, lb, lcb, lwb, rb, rcb, rwb => def
+cam, cdm, cm, lam, lcm, ldm, lm, ram, rcm, rdm, rm => cen
+cf, lf, ls,lw, rf, rs, rw, st => att
+res, sub => sub
+click club_position (groups)
+unclick club_position
+
+new visualizations >> pie chart + 
+data >> club_position (groups) to legend
+data >> value_eur to values
+visualizations >> format your visual > legend > options > position: top center
+
+new visualizations >> stacked bar chart + data >> short_name + overall
+club_position (groups) > filters >> add data fields here > att
+
+new visualizations >> stacked bar chart + data >> short_name + overall
+club_position (groups) > filters >> add data fields here > cen
+
+new visualizations >> stacked bar chart + data >> short_name + overall
+club_position (groups) > filters >> add data fields here > def
+
+visualizations >> format your visual > slicer header
+
+
+
+
